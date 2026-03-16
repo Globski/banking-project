@@ -360,6 +360,79 @@ http://localhost:5000
 
 ---
 
+# Features
+
+## Customer-Facing Features
+	1.	User Accounts & Authentication
+	•	Sign-up/login (email, phone, biometrics)
+	•	Two-factor authentication (2FA)
+	•	Password recovery
+	2.	Dashboard
+	•	Account balances
+	•	Recent transactions
+	•	Notifications
+	3.	Transfers & Payments
+	•	Internal transfers (within bank)
+	•	External transfers (other banks, same country)
+	•	Bill payments, mobile money integration
+	•	Scheduled or recurring payments
+	4.	Cards & Loans
+	•	Request debit/credit cards
+	•	Manage card limits, freeze/unfreeze
+	•	Loan applications and repayment tracking
+	5.	Customer Support
+	•	Chatbot or live chat
+	•	FAQ and knowledge base
+	•	Ticket tracking
+	6.	Security & Alerts
+	•	SMS/email alerts for transactions
+	•	Fraud detection flags
+	•	Secure logout and session timeout
+
+---
+
+## Admin / Bank Staff Features
+	1.	User Management
+	•	Approve new accounts
+	•	Manage KYC documents
+	2.	Transaction Monitoring
+	•	Flag suspicious activities
+	•	Daily transaction reports
+	3.	Product Management
+	•	Configure loans, interest rates, and card types
+	•	Manage promotional offers
+
+---
+
+
+## Technology Stack
+	•	Frontend: React for responsive UI
+	•	Backend: Node.js (Express), Django, or Spring Boot
+	•	Database: PostgreSQL or MySQL for accounts, Redis for caching
+	•	Authentication: OAuth2 + JWT + 2FA
+	•	Security: HTTPS, encryption for data at rest & in transit
+	•	Deployment: Docker + Kubernetes, cloud hosting (AWS, GCP, Azure)
+	•	Notifications: Twilio (SMS), SendGrid (Email)
+	•	Mobile Apps: React Native or Flutter for mobile version
+
+---
+
+## UI/UX Considerations
+	•	Simple, clean dashboards
+	•	Easy navigation between accounts, transfers, payments
+	•	Mobile-first design
+	•	Accessibility standards (WCAG)
+
+---
+
+## Compliance & Security
+	•	KYC/AML checks
+	•	PCI DSS compliance for card payments
+	•	Strong encryption (AES-256 for data, TLS 1.3 for network)
+	•	Regular security audits
+
+---
+
 # Future Improvements
 
 ### Planned upgrades include:
