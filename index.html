@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nanabank</title>
+
+<style>
+
+/* ===== RESET ===== */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Segoe UI', sans-serif;
+}
+
+/* ===== BODY ===== */
+body{
+  height:100vh;
+  background:linear-gradient(135deg,#0a1f44,#1c3faa,#3b82f6);
+  color:white;
+}
+
+/* ===== NAV ===== */
+.nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:25px 40px;
+}
+
+/* ===== LOGO ===== */
+.logo svg{
+  cursor:pointer;
+  transition:.3s;
+}
+.logo svg:hover{
+  transform:translateY(-2px) scale(1.03);
+}
+
+/* ===== NAV BUTTONS ===== */
+.nav-buttons{
+  display:flex;
+  gap:12px;
+}
+
+/* ===== BUTTON BASE ===== */
+button{
+  padding:10px 18px;
+  font-size:14px;
+  border-radius:8px;
+  cursor:pointer;
+  transition:.3s;
+}
+
+/* CTA BUTTON (CENTER) */
+.cta{
+  margin-top: 24px;
+  padding: 14px 28px;
+  font-size: 15px;
+
+  border-radius: 10px;
+  border: none;
+
+  background: white;
+  color: #0a1f44;
+
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.cta:hover{
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+  
+/* LOGIN (TRANSPARENT) */
+.ghost{
+  background:transparent;
+  border:1px solid rgba(255,255,255,0.6);
+  color:white;
+}
+
+/* OPEN ACCOUNT (SOLID) */
+.primary{
+  background:white;
+  color:#0a1f44;
+  border:none;
+}
+
+/* HOVER */
+button:hover{
+  transform:translateY(-2px);
+}
+
+/* ===== HERO ===== */
+.hero{
+  height:calc(100vh - 90px);
+
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+
+  text-align:center;
+  padding:20px;
+
+  animation:fadeIn .8s ease;
+}
+
+/* TITLE */
+.hero h1{
+  font-size:44px;
+  font-weight:600;
+  margin-bottom:12px;
+}
+
+/* TEXT */
+.hero p{
+  font-size:17px;
+  opacity:.9;
+  max-width:500px;
+}
+
+/* ===== ANIMATION ===== */
+@keyframes fadeIn{
+  from{opacity:0;transform:translateY(20px);}
+  to{opacity:1;transform:translateY(0);}
+}
+
+/* ===== MOBILE ===== */
+@media(max-width:768px){
+
+  .hero h1{
+    font-size:30px;
+  }
+
+  .hero p{
+    font-size:15px;
+  }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- ===== NAV ===== -->
+<div class="nav">
+
+  <!-- LOGO -->
+  <div class="logo">
+    <svg viewBox="0 0 320 80" width="170">
+      <defs>
+        <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#0a1f44"/>
+          <stop offset="100%" stop-color="#3b82f6"/>
+        </linearGradient>
+      </defs>
+
+      <rect x="0" y="10" width="60" height="60" rx="16" fill="url(#g)"/>
+      <path d="M15 55 V25 L45 55 V25" stroke="white" stroke-width="6" fill="none"/>
+      <text x="80" y="52" fill="white" style="font-size:32px;font-weight:600;">
+        Nanabank
+      </text>
+    </svg>
+  </div>
+
+  <!-- BUTTONS (TOP RIGHT) -->
+  <div class="nav-buttons">
+    <button class="ghost" onclick="enterApp('loginPage')">Login</button>
+    <button class="primary" onclick="enterApp('registerPage')">Open Account</button>
+  </div>
+
+</div>
+
+<!-- ===== HERO ===== -->
+<div class="hero">
+      <h1>Banking made simple, fast & secure</h1>
+      <p>Send money, track spending, and manage finances in one place.</p>
+
+  <button class="cta" onclick="enterApp('registerPage')">
+    Get Started
+  </button>
+
+</div>
+
+</body>
+</html>
